@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class obsinfo(models.Model):
-    UID = models.IntegerField()
+    UID = models.IntegerField() 
     date_obs = models.CharField(max_length=50)
     time_obs = models.CharField(max_length=50)
     date_end = models.CharField(max_length=50)
