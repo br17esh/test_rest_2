@@ -26,4 +26,5 @@ urlpatterns = [
     path('dqrreport/dph', views1.dphList.as_view()),
     path('dqrreport/obsinfo', views1.obsinfoList.as_view()),
     path('dqrreport/housekeeping', views1.housekeepingList.as_view()),
+    path('dqrreport/countrate', views1.countrateList.as_view()),
 ]

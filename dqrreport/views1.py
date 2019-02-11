@@ -12,6 +12,8 @@ from . models import obsinfo
 from . serializers import obsinfoSerializer
 from . models import housekeeping
 from . serializers import housekeepingSerializer
+from . models import countrate
+from . serializers import countrateSerializer
 
 # Create your views here.
 class obsinfoList(APIView):
@@ -39,6 +41,16 @@ class dphList(APIView):
     def get(self, request):
         dph1 = dph.objects.all()
         serializer = dphSerializer(dph1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class countrateList(APIView):
+
+    def get(self, request):
+        ctrate = countrate.objects.all()
+        serializer = countrateSerializer(ctrate,many=True)
         return Response(serializer.data)
 
     def post(self):

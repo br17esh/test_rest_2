@@ -47,6 +47,24 @@ class dph(models.Model):
     def __str__(self):
         return self.quadA
 
+class countrate(models.Model):
+    UID = models.IntegerField()
+    crplot1 = models.CharField(max_length=200)
+    crimg1 = models.CharField(max_length=200)
+    crplot2 = models.CharField(max_length=200)
+    crimg2 = models.CharField(max_length=200)
+    crplot3 = models.CharField(max_length=200)
+    crimg3 = models.CharField(max_length=200)
+    crplot4 = models.CharField(max_length=200)
+    crimg4 = models.CharField(max_length=200)
+    crplot5 = models.CharField(max_length=200)
+    crimg5 = models.CharField(max_length=200)
+    crplot6 = models.CharField(max_length=200)
+    crimg6 = models.CharField(max_length=200)
+     
+    def __str__(self):
+        return self.crplot1
+
 class housekeeping(models.Model):
     UID = models.IntegerField()
     plot1 = models.CharField(max_length=200)

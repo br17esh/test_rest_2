@@ -3,9 +3,11 @@ from . models import obsinfo
 from . models import dqrstats
 from . models import dph
 from . models import housekeeping
+from . models import countrate
 
 # Register your models here.
 admin.site.register(obsinfo)
 admin.site.register(dqrstats)
 admin.site.register(dph)
 admin.site.register(housekeeping)
+admin.site.register(countrate)
