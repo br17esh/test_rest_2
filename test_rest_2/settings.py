@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import pymysql
 import MySQLdb
-import mysql
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -28,7 +29,7 @@ SECRET_KEY = '-_e5w+7@z4qoz0r$wn527*t9nkhv+v9o%i*34au86!w5)g%cl^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','localhost','192.168.2.4','192.168.2.12','192.168.43.12']
+ALLOWED_HOSTS = ['0.0.0.0','localhost','192.168.2.4','192.168.2.12','192.168.43.12','192.168.43.96']
 
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'iucaaapp',
     'dqrreport',
+    'uploadwise',
 ]
 
 MIDDLEWARE = [
