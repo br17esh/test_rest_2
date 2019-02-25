@@ -12,7 +12,7 @@ class summaryList(APIView):
 
     def get(self, request):
         summ = summary.objects.all()
-        serializer = summarySerializer(summ,many=True)
+        serializer = summarySerializer(summ.all(),many=True, read_only=True)
         return Response(serializer.data)
 
     def post(self):
