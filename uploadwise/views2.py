@@ -15,5 +15,6 @@ class upobsidList(APIView):
         serializer = upobsidSerializer(up1,many=True)
         return Response(serializer.data)
 
+
     def post(self):
         pass
