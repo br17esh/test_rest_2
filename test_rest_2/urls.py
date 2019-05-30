@@ -18,7 +18,7 @@ from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from iucaaapp import views
 from dqrreport import views1
-from  uploadwise import  views2
+from uploadwise import views2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,9 @@ urlpatterns = [
     path('dqrreport/obsinfo', views1.obsinfoList.as_view()),
     path('dqrreport/housekeeping', views1.housekeepingList.as_view()),
     path('dqrreport/countrate', views1.countrateList.as_view()),
+    path('dqrreport/datainteg', views1.dataintegList.as_view()),
+    path('dqrreport/datasat', views1.datasatList.as_view()),
+    path('dqrreport/noisefrag', views1.noisefragList.as_view()),
     path('uploadwise/upobsid', views2.upobsidList.as_view()),
+
 ]
