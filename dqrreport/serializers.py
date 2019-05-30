@@ -4,9 +4,6 @@ from . models import dph
 from . models import obsinfo
 from . models import housekeeping
 from . models import countrate
-from . models import datainteg
-from . models import datasat
-from . models import noisefrag
 
 class obsinfoSerializer(serializers.ModelSerializer):
 
@@ -36,22 +33,4 @@ class housekeepingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = housekeeping
-        fields = '__all__'
-
-class dataintegSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = datainteg
-        fields = '__all__'
-
-class datasatSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = datasat
-        fields = '__all__'
-
-class noisefragSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = noisefrag
         fields = '__all__'
