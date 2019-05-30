@@ -33,4 +33,5 @@ urlpatterns = [
     path('dqrreport/noisefrag', views1.noisefragList.as_view()),
     path('uploadwise/upobsid', views2.upobsidList.as_view()),
 
+
 ]

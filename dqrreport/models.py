@@ -174,6 +174,7 @@ class noisefrag(models.Model):
     QC_NDT = models.CharField(max_length=200)
     QC_MLC = models.CharField(max_length=200)
 
+
     QD_S1B = models.CharField(max_length=200)
     QD_B0C = models.CharField(max_length=200)
     QD_B2KC = models.CharField(max_length=200)
