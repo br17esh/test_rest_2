@@ -14,6 +14,12 @@ from . models import housekeeping
 from . serializers import housekeepingSerializer
 from . models import countrate
 from . serializers import countrateSerializer
+from . models import datainteg
+from . serializers import dataintegSerializer
+from . models import datasat
+from . serializers import datasatSerializer
+from . models import noisefrag
+from . serializers import noisefragSerializer
 
 # Create your views here.
 class obsinfoList(APIView):
@@ -65,3 +71,34 @@ class housekeepingList(APIView):
 
     def post(self):
         pass
+
+class dataintegList(APIView):
+
+    def get(self, request):
+        dinteg1 = datainteg.objects.all()
+        serializer = dataintegSerializer(dinteg1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class datasatList(APIView):
+
+    def get(self, request):
+        datasat1 = datasat.objects.all()
+        serializer = datasatSerializer(datasat1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class noisefragList(APIView):
+
+    def get(self, request):
+        noise1 = noisefrag.objects.all()
+        serializer = noisefragSerializer(noise1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
