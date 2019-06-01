@@ -150,6 +150,7 @@ class datasat(models.Model):
 
 class noisefrag(models.Model):
     UID = models.CharField(max_length=200)
+
     QA_S1B = models.CharField(max_length=200)
     QA_B0C = models.CharField(max_length=200)
     QA_B2KC = models.CharField(max_length=200)
@@ -174,7 +175,6 @@ class noisefrag(models.Model):
     QC_NDT = models.CharField(max_length=200)
     QC_MLC = models.CharField(max_length=200)
 
-
     QD_S1B = models.CharField(max_length=200)
     QD_B0C = models.CharField(max_length=200)
     QD_B2KC = models.CharField(max_length=200)
@@ -185,3 +185,107 @@ class noisefrag(models.Model):
 
     def __str__(self):
         return self.QA_S1B
+
+# class pixelprop(models.Model):
+#     UID = models.CharField(max_length=200)
+#
+#     PP_QA1_DID = models.CharField(max_length=200)
+#     PP_QA1_PID = models.CharField(max_length=200)
+#     PP_QA1_CNT = models.CharField(max_length=200)
+#     PP_QA1_SG = models.CharField(max_length=200)
+#     PP_QA2_DID = models.CharField(max_length=200)
+#     PP_QA2_PID = models.CharField(max_length=200)
+#     PP_QA2_CNT = models.CharField(max_length=200)
+#     PP_QA2_SG = models.CharField(max_length=200)
+#     PP_QA3_DID = models.CharField(max_length=200)
+#     PP_QA3_PID = models.CharField(max_length=200)
+#     PP_QA3_CNT = models.CharField(max_length=200)
+#     PP_QA3_SG = models.CharField(max_length=200)
+#
+#     PP_QB1_DID = models.CharField(max_length=200)
+#     PP_QB1_PID = models.CharField(max_length=200)
+#     PP_QB1_CNT = models.CharField(max_length=200)
+#     PP_QB1_SG = models.CharField(max_length=200)
+#     PP_QB2_DID = models.CharField(max_length=200)
+#     PP_QB2_PID = models.CharField(max_length=200)
+#     PP_QB2_CNT = models.CharField(max_length=200)
+#     PP_QB2_SG = models.CharField(max_length=200)
+#     PP_QB3_DID = models.CharField(max_length=200)
+#     PP_QB3_PID = models.CharField(max_length=200)
+#     PP_QB3_CNT = models.CharField(max_length=200)
+#     PP_QB3_SG = models.CharField(max_length=200)
+#
+#     PP_QC1_DID = models.CharField(max_length=200)
+#     PP_QC1_PID = models.CharField(max_length=200)
+#     PP_QC1_CNT = models.CharField(max_length=200)
+#     PP_QC1_SG = models.CharField(max_length=200)
+#     PP_QC2_DID = models.CharField(max_length=200)
+#     PP_QC2_PID = models.CharField(max_length=200)
+#     PP_QC2_CNT = models.CharField(max_length=200)
+#     PP_QC2_SG = models.CharField(max_length=200)
+#     PP_QC3_DID = models.CharField(max_length=200)
+#     PP_QC3_PID = models.CharField(max_length=200)
+#     PP_QC3_CNT = models.CharField(max_length=200)
+#     PP_QC3_SG = models.CharField(max_length=200)
+#
+#     PP_QD1_DID = models.CharField(max_length=200)
+#     PP_QD1_PID = models.CharField(max_length=200)
+#     PP_QD1_CNT = models.CharField(max_length=200)
+#     PP_QD1_SG = models.CharField(max_length=200)
+#     PP_QD2_DID = models.CharField(max_length=200)
+#     PP_QD2_PID = models.CharField(max_length=200)
+#     PP_QD2_CNT = models.CharField(max_length=200)
+#     PP_QD2_SG = models.CharField(max_length=200)
+#     PP_QD3_DID = models.CharField(max_length=200)
+#     PP_QD3_PID = models.CharField(max_length=200)
+#     PP_QD3_CNT = models.CharField(max_length=200)
+#     PP_QD3_SG = models.CharField(max_length=200)
+#
+#     def __str__(self):
+#         return self.PP_QA1_DID
+
+# class quadprop(models.Model):
+#     UID = models.CharField(max_length=200)
+#
+#     QP_QA1_MN = models.CharField(max_length=200)
+#     QP_QA1_MD = models.CharField(max_length=200)
+#     QP_QA1_SG = models.CharField(max_length=200)
+#     QP_QA2_MN = models.CharField(max_length=200)
+#     QP_QA2_MD = models.CharField(max_length=200)
+#     QP_QA2_SG = models.CharField(max_length=200)
+#     QP_QA3_MN = models.CharField(max_length=200)
+#     QP_QA3_MD = models.CharField(max_length=200)
+#     QP_QA3_SG = models.CharField(max_length=200)
+#
+#     QP_QB1_MN = models.CharField(max_length=200)
+#     QP_QB1_MD = models.CharField(max_length=200)
+#     QP_QB1_SG = models.CharField(max_length=200)
+#     QP_QB2_MN = models.CharField(max_length=200)
+#     QP_QB2_MD = models.CharField(max_length=200)
+#     QP_QB2_SG = models.CharField(max_length=200)
+#     QP_QB3_MN = models.CharField(max_length=200)
+#     QP_QB3_MD = models.CharField(max_length=200)
+#     QP_QB3_SG = models.CharField(max_length=200)
+#
+#     QP_QC1_MN = models.CharField(max_length=200)
+#     QP_QC1_MD = models.CharField(max_length=200)
+#     QP_QC1_SG = models.CharField(max_length=200)
+#     QP_QC2_MN = models.CharField(max_length=200)
+#     QP_QC2_MD = models.CharField(max_length=200)
+#     QP_QC2_SG = models.CharField(max_length=200)
+#     QP_QC3_MN = models.CharField(max_length=200)
+#     QP_QC3_MD = models.CharField(max_length=200)
+#     QP_QC3_SG = models.CharField(max_length=200)
+#
+#     QP_QD1_MN = models.CharField(max_length=200)
+#     QP_QD1_MD = models.CharField(max_length=200)
+#     QP_QD1_SG = models.CharField(max_length=200)
+#     QP_QD2_MN = models.CharField(max_length=200)
+#     QP_QD2_MD = models.CharField(max_length=200)
+#     QP_QD2_SG = models.CharField(max_length=200)
+#     QP_QD3_MN = models.CharField(max_length=200)
+#     QP_QD3_MD = models.CharField(max_length=200)
+#     QP_QD3_SG = models.CharField(max_length=200)
+#
+#     def __str__(self):
+#         return self.QP_QA1_MN

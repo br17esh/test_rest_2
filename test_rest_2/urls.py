@@ -31,7 +31,9 @@ urlpatterns = [
     path('dqrreport/datainteg', views1.dataintegList.as_view()),
     path('dqrreport/datasat', views1.datasatList.as_view()),
     path('dqrreport/noisefrag', views1.noisefragList.as_view()),
-    path('uploadwise/upobsid', views2.upobsidList.as_view()),
+    #path('dqrreport/pixelprop', views1.pixelpropList.as_view()),
+    #path('dqrreport/quadprop', views1.quadpropList.as_view()),
 
+    path('uploadwise/upobsid', views2.upobsidList.as_view()),
 
 ]

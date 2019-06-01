@@ -7,6 +7,9 @@ from . models import countrate
 from . models import datainteg
 from . models import datasat
 from . models import noisefrag
+#from . models import pixelprop
+#from . models import quadprop
+
 
 class obsinfoSerializer(serializers.ModelSerializer):
 
@@ -55,3 +58,15 @@ class noisefragSerializer(serializers.ModelSerializer):
     class Meta:
         model = noisefrag
         fields = '__all__'
+
+# class pixelpropSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = pixelprop
+#         fields = '__all__'
+
+# class quadpropSerializer(serializers.ModelSerializer):
+#
+#     class Meta:
+#         model = quadprop
+#         fields = '__all__'
