@@ -35,7 +35,9 @@ urlpatterns = [
     path('dqrreport/noisefrag', views1.noisefragList.as_view()),
     path('dqrreport/pixelprop', views1.pixelpropList.as_view()),
     path('dqrreport/quadprop', views1.quadpropList.as_view()),
+
     path('mg_iucaaapp/', views2.summaryList.as_view()),
+
     path('mg_dqrreport/dqrstats', views3.dqrstatsList.as_view()),
     path('mg_dqrreport/dph', views3.dphList.as_view()),
     path('mg_dqrreport/obsinfo', views3.obsinfoList.as_view()),
