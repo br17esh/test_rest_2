@@ -119,7 +119,7 @@ class pixelpropList(APIView):
 class quadpropList(APIView):
 
     def get(self, request):
-        qprop1 = topno.objects.all()
+        qprop1 = quadprop.objects.all()
         serializer = quadpropSerializer(qprop1,many=True)
         return Response(serializer.data)
 
