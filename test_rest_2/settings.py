@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'iucaaapp',
     'dqrreport',
     'uploadwise',
+    'mg_iucaaapp',
+    'mg_dqrreport',
 ]
 
 MIDDLEWARE = [

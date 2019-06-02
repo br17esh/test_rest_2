@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 from iucaaapp import views
+from mg_iucaaapp import views2
 from dqrreport import views1
-from uploadwise import views2
+from mg_dqrreport import views3
+from uploadwise import views4
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,7 +35,18 @@ urlpatterns = [
     path('dqrreport/noisefrag', views1.noisefragList.as_view()),
     path('dqrreport/pixelprop', views1.pixelpropList.as_view()),
     path('dqrreport/quadprop', views1.quadpropList.as_view()),
+    path('mg_iucaaapp/', views2.summaryList.as_view()),
+    path('mg_dqrreport/dqrstats', views3.dqrstatsList.as_view()),
+    path('mg_dqrreport/dph', views3.dphList.as_view()),
+    path('mg_dqrreport/obsinfo', views3.obsinfoList.as_view()),
+    path('mg_dqrreport/housekeeping', views3.housekeepingList.as_view()),
+    path('mg_dqrreport/countrate', views3.countrateList.as_view()),
+    path('mg_dqrreport/datainteg', views3.dataintegList.as_view()),
+    path('mg_dqrreport/datasat', views3.datasatList.as_view()),
+    path('mg_dqrreport/noisefrag', views3.noisefragList.as_view()),
+    path('mg_dqrreport/pixelprop', views3.pixelpropList.as_view()),
+    path('mg_dqrreport/quadprop', views3.quadpropList.as_view()),
 
-    path('uploadwise/upobsid', views2.upobsidList.as_view()),
+    path('uploadwise/upobsid', views4.upobsidList.as_view()),
 
 ]
