@@ -1,10 +1,10 @@
 from django.db import models
 
 class summary(models.Model):
-    UID = models.IntegerField() 
-    folder = models.CharField(max_length=50)
+    UID = models.CharField(max_length=200)
+    folder = models.CharField(max_length=200)
     # OBSID = models.CharField(max_length=50)
-    Observer = models.CharField(max_length=50)
+    Observer = models.CharField(max_length=200)
     # Object = models.CharField(max_length=50)
     # RA = models.FloatField()
     # Decr = models.FloatField()

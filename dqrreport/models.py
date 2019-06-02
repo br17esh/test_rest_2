@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class obsinfo(models.Model):
-    UID = models.IntegerField() 
+    UID = models.CharField(max_length=200)
     date_obs = models.CharField(max_length=50)
     time_obs = models.CharField(max_length=50)
     date_end = models.CharField(max_length=50)
@@ -18,7 +18,7 @@ class obsinfo(models.Model):
         return self.date_obs
 
 class dqrstats(models.Model):
-    UID = models.IntegerField()
+    UID = models.CharField(max_length=200)
     filename_OF = models.CharField(max_length=50)
     filename_FF = models.CharField(max_length=50)
     size_bytes_OF = models.CharField(max_length=50)
@@ -38,7 +38,7 @@ class dqrstats(models.Model):
         return self.filename_OF
 
 class dph(models.Model):
-    UID = models.IntegerField()
+    UID = models.CharField(max_length=200)
     quadA = models.CharField(max_length=200)
     quadB = models.CharField(max_length=200)
     quadC = models.CharField(max_length=200)
@@ -48,7 +48,7 @@ class dph(models.Model):
         return self.quadA
 
 class countrate(models.Model):
-    UID = models.IntegerField()
+    UID = models.CharField(max_length=200)
     crplot1 = models.CharField(max_length=200)
     crimg1 = models.CharField(max_length=200)
     crplot2 = models.CharField(max_length=200)
@@ -66,7 +66,7 @@ class countrate(models.Model):
         return self.crplot1
 
 class housekeeping(models.Model):
-    UID = models.IntegerField()
+    UID = models.CharField(max_length=200)
     plot1 = models.CharField(max_length=200)
     plot2 = models.CharField(max_length=200)
     plot3 = models.CharField(max_length=200)
@@ -86,7 +86,7 @@ class housekeeping(models.Model):
         return self.plot1
 
 class datainteg(models.Model):
-    UID = models.IntegerField()
+    UID = models.CharField(max_length=200)
     M9_A_BD = models.CharField(max_length=200)
     M9_A_TP = models.CharField(max_length=200)
     M9_A_DP = models.CharField(max_length=200)
