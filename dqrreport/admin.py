@@ -7,8 +7,8 @@ from . models import countrate
 from . models import datainteg
 from . models import datasat
 from . models import noisefrag
-#from . models import pixelprop
-#from . models import quadprop
+from . models import pixelprop
+from . models import quadprop
 
 # Register your models here.
 admin.site.register(obsinfo)
@@ -19,5 +19,5 @@ admin.site.register(countrate)
 admin.site.register(datainteg)
 admin.site.register(datasat)
 admin.site.register(noisefrag)
-#admin.site.register(pixelprop)
-#admin.site.register(quadprop)
+admin.site.register(pixelprop)
+admin.site.register(quadprop)

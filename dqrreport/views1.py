@@ -20,10 +20,10 @@ from . models import datasat
 from . serializers import datasatSerializer
 from . models import noisefrag
 from . serializers import noisefragSerializer
-# from . models import pixelprop
-# from . serializers import pixelpropSerializer
-# from . models import quadprop
-# from . serializers import quadpropSerializer
+from . models import pixelprop
+from . serializers import pixelpropSerializer
+from . models import quadprop
+from . serializers import quadpropSerializer
 
 # Create your views here.
 class obsinfoList(APIView):
@@ -106,23 +106,23 @@ class noisefragList(APIView):
     def post(self):
         pass
 
-# class pixelpropList(APIView):
-#
-#     def get(self, request):
-#         pprop1 = pixelprop.objects.all()
-#         serializer = pixelpropSerializer(pprop1,many=True)
-#         return Response(serializer.data)
-#
-#     def post(self):
-#         pass
+class pixelpropList(APIView):
 
-# class quadpropList(APIView):
-#
-#     def get(self, request):
-#         qprop1 = topno.objects.all()
-#         serializer = quadpropSerializer(qprop1,many=True)
-#         return Response(serializer.data)
-#
-#     def post(self):
-#         pass
+    def get(self, request):
+        pprop1 = pixelprop.objects.all()
+        serializer = pixelpropSerializer(pprop1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+class quadpropList(APIView):
+
+    def get(self, request):
+        qprop1 = topno.objects.all()
+        serializer = quadpropSerializer(qprop1,many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
 
