@@ -18,6 +18,7 @@ class obsinfo(models.Model):
         return self.date_obs
 
 class dqrstats(models.Model):
+
     UID = models.CharField(max_length=200)
     filename_OF = models.CharField(max_length=50)
     filename_FF = models.CharField(max_length=50)
