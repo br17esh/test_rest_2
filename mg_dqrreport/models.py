@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class obsinfo(models.Model):
     UID = models.CharField(max_length=200)
@@ -17,6 +18,7 @@ class obsinfo(models.Model):
     def __str__(self):
         return self.date_obs
 
+
 class dqrstats(models.Model):
     UID = models.CharField(max_length=200)
     filename_OF = models.CharField(max_length=50)
@@ -28,14 +30,15 @@ class dqrstats(models.Model):
     events_quadA_OF = models.CharField(max_length=50)
     events_quadA_FF = models.CharField(max_length=50)
     events_quadB_OF = models.CharField(max_length=50)
-    events_quadB_FF = models.CharField(max_length=50)    
+    events_quadB_FF = models.CharField(max_length=50)
     events_quadC_OF = models.CharField(max_length=50)
     events_quadC_FF = models.CharField(max_length=50)
     events_quadD_OF = models.CharField(max_length=50)
     events_quadD_FF = models.CharField(max_length=50)
-     
+
     def __str__(self):
         return self.filename_OF
+
 
 class dph(models.Model):
     UID = models.CharField(max_length=200)
@@ -43,9 +46,10 @@ class dph(models.Model):
     quadB = models.CharField(max_length=200)
     quadC = models.CharField(max_length=200)
     quadD = models.CharField(max_length=200)
-     
+
     def __str__(self):
         return self.quadA
+
 
 class countrate(models.Model):
     UID = models.CharField(max_length=200)
@@ -61,9 +65,10 @@ class countrate(models.Model):
     crimg5 = models.CharField(max_length=200)
     crplot6 = models.CharField(max_length=200)
     crimg6 = models.CharField(max_length=200)
-     
+
     def __str__(self):
         return self.crplot1
+
 
 class housekeeping(models.Model):
     UID = models.CharField(max_length=200)
@@ -81,9 +86,10 @@ class housekeeping(models.Model):
     plot12 = models.CharField(max_length=200)
     plot13 = models.CharField(max_length=200)
     plot14 = models.CharField(max_length=200)
-    
+
     def __str__(self):
         return self.plot1
+
 
 class datainteg(models.Model):
     UID = models.CharField(max_length=200)
@@ -129,6 +135,7 @@ class datainteg(models.Model):
     def __str__(self):
         return self.M9_A_BD
 
+
 class datasat(models.Model):
     UID = models.CharField(max_length=200)
     QA_TS = models.CharField(max_length=200)
@@ -146,7 +153,7 @@ class datasat(models.Model):
 
     def __str__(self):
         return self.QA_TS
-    
+
 
 class noisefrag(models.Model):
     UID = models.CharField(max_length=200)
@@ -185,6 +192,7 @@ class noisefrag(models.Model):
 
     def __str__(self):
         return self.QA_S1B
+
 
 class pixelprop(models.Model):
     UID = models.CharField(max_length=200)
@@ -243,6 +251,7 @@ class pixelprop(models.Model):
 
     def __str__(self):
         return self.PP_QA1_DID
+
 
 class quadprop(models.Model):
     UID = models.CharField(max_length=200)
